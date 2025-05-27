@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manjot Singh - Data Scientist Portfolio</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="animated-bg">
+        <div class="gradient-bg"></div>
+        <div class="particles" id="particles"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-text">MS</span>
+            </div>
+            <div class="nav-menu" id="navMenu">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#academics" class="nav-link">Academics</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#experience" class="nav-link">Experience</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            <div class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <div class="glitch" data-text="Hello, I'm">Hello, I'm</div>
+                <h1 class="hero-title">Manjot Singh</h1>
+                <div class="hero-subtitle">
+                    <span class="typing-text">Data Scientist</span>
+                    <span class="cursor">|</span>
+                </div>
+                <p class="hero-description">
+                    Master's student at San Jose State University specializing in Data Analytics, 
+                    Machine Learning, and Big Data Technologies.
+                </p>
+                <div class="hero-cta">
+                    <a href="#projects" class="btn btn-primary">
+                        <span>View Projects</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <a href="resume/Manjot_Resume.pdf" class="btn btn-secondary" download>
+                        <span>Download Resume</span>
+                        <i class="fas fa-download"></i>
+                    </a>
+                </div>
+                <div class="social-links">
+                    <a href="https://github.com/Manjot7" target="_blank" class="social-link">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://linkedin.com/in/manjot-singh" target="_blank" class="social-link">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="mailto:manjot1191@gmail.com" class="social-link">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="floating-cards">
+                    <div class="card card-1">
+                        <i class="fas fa-brain"></i>
+                        <span>ML</span>
+                    </div>
+                    <div class="card card-2">
+                        <i class="fas fa-chart-line"></i>
+                        <span>Analytics</span>
+                    </div>
+                    <div class="card card-3">
+                        <i class="fas fa-database"></i>
+                        <span>Big Data</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-number">01.</span>
+                About Me
+            </h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>
+                        I'm a passionate Data Scientist currently pursuing my Master's in Data Analytics at 
+                        San Jose State University. With a strong foundation in Computer Science and Engineering 
+                        from my Bachelor's degree (CGPA: 9.55), I specialize in transforming complex data into 
+                        actionable insights.
+                    </p>
+                    <p>
+                        My experience as a Junior Data Analyst at AMS Informatics allowed me to drive significant 
+                        business impact, including a 30% increase in customer website traffic through data-driven 
+                        advertising strategies and a 15% reduction in data querying errors through database optimization.
+                    </p>
+                    <p>
+                        I'm proficient in multiple languages including English (IELTS C1), Hindi, Punjabi (native), 
+                        and Japanese (JLPT N4), which enhances my ability to work in diverse, global teams.
+                    </p>
+                </div>
+                <div class="about-stats">
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class="fas fa-graduation-cap"></i></div>
+                        <div class="stat-number">9.55</div>
+                        <div class="stat-label">Bachelor's CGPA</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class="fas fa-code-branch"></i></div>
+                        <div class="stat-number" data-target="12">0</div>
+                        <div class="stat-label">GitHub Projects</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class="fas fa-award"></i></div>
+                        <div class="stat-number" data-target="5">0</div>
+                        <div class="stat-label">Tech Certifications</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Academics Section -->
+    <section id="academics" class="academics">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-number">02.</span>
+                Academic Journey
+            </h2>
+            <div class="academics-timeline">
+                <div class="academic-card" data-aos="fade-up">
+                    <div class="academic-icon">
+                        <i class="fas fa-university"></i>
+                    </div>
+                    <div class="academic-content">
+                        <h3 class="academic-degree">Master of Science in Data Analytics</h3>
+                        <h4 class="academic-institution">San Jose State University</h4>
+                        <div class="academic-details">
+                            <span class="academic-date"><i class="fas fa-calendar"></i> 2024 - Present</span>
+                            <span class="academic-location"><i class="fas fa-map-marker-alt"></i> San Jose, CA, USA</span>
+                        </div>
+                        <div class="academic-grade">
+                            <span class="grade-label">Current GPA:</span>
+                            <span class="grade-value">3.33/4.0</span>
+                        </div>
+                        <div class="academic-courses">
+                            <h5>Key Coursework:</h5>
+                            <div class="course-tags">
+                                <span class="course-tag">Machine Learning</span>
+                                <span class="course-tag">Deep Learning</span>
+                                <span class="course-tag">Big Data Technologies</span>
+                                <span class="course-tag">Statistical Analysis</span>
+                                <span class="course-tag">Data Visualization</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="academic-card" data-aos="fade-up">
+                    <div class="academic-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="academic-content">
+                        <h3 class="academic-degree">Bachelor of Engineering (Computer Science & Engineering)</h3>
+                        <h4 class="academic-institution">Chitkara University</h4>
+                        <div class="academic-details">
+                            <span class="academic-date"><i class="fas fa-calendar"></i> 2019 - 2023</span>
+                            <span class="academic-location"><i class="fas fa-map-marker-alt"></i> Rajpura, India</span>
+                        </div>
+                        <div class="academic-grade">
+                            <span class="grade-label">CGPA:</span>
+                            <span class="grade-value">9.55/10.0</span>
+                            <span class="grade-badge">Top 5% of Class</span>
+                        </div>
+                        <div class="academic-courses">
+                            <h5>Key Coursework:</h5>
+                            <div class="course-tags">
+                                <span class="course-tag">Data Structures</span>
+                                <span class="course-tag">Algorithms</span>
+                                <span class="course-tag">Database Systems</span>
+                                <span class="course-tag">Artificial Intelligence</span>
+                                <span class="course-tag">Software Engineering</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="academic-card" data-aos="fade-up">
+                    <div class="academic-icon">
+                        <i class="fas fa-school"></i>
+                    </div>
+                    <div class="academic-content">
+                        <h3 class="academic-degree">High School Diploma</h3>
+                        <h4 class="academic-institution">Govt. Model Senior Secondary School & Guru Nanak Public School</h4>
+                        <div class="academic-details">
+                            <span class="academic-date"><i class="fas fa-calendar"></i> 2017 - 2019</span>
+                            <span class="academic-location"><i class="fas fa-map-marker-alt"></i> Chandigarh, India</span>
+                        </div>
+                        <div class="academic-achievements">
+                            <div class="achievement">
+                                <span class="achievement-label">Class XII:</span>
+                                <span class="achievement-value">62.6%</span>
+                            </div>
+                            <div class="achievement">
+                                <span class="achievement-label">Class X:</span>
+                                <span class="achievement-value">Perfect CGPA 10/10</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-number">03.</span>
+                Technical Skills
+            </h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3 class="skill-title">
+                        <i class="fas fa-code"></i>
+                        Languages
+                    </h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">SQL</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3 class="skill-title">
+                        <i class="fas fa-tools"></i>
+                        Tools & Libraries
+                    </h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">PowerBI</span>
+                        <span class="skill-tag">Tableau</span>
+                        <span class="skill-tag">AWS</span>
+                        <span class="skill-tag">Pandas</span>
+                        <span class="skill-tag">NumPy</span>
+                        <span class="skill-tag">TensorFlow</span>
+                        <span class="skill-tag">Scikit-Learn</span>
+                        <span class="skill-tag">Statsmodels</span>
+                        <span class="skill-tag">XGBoost</span>
+                        <span class="skill-tag">NLTK</span>
+                        <span class="skill-tag">Seaborn</span>
+                        <span class="skill-tag">Matplotlib</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3 class="skill-title">
+                        <i class="fas fa-laptop-code"></i>
+                        Developer Tools
+                    </h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">GitHub</span>
+                        <span class="skill-tag">VS Code</span>
+                        <span class="skill-tag">Google Colab</span>
+                        <span class="skill-tag">Jupyter Notebooks</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-number">04.</span>
+                Featured Projects
+            </h2>
+            <div class="projects-grid">
+                <div class="project-card" data-tilt>
+                    <div class="project-icon">
+                        <i class="fas fa-network-wired"></i>
+                    </div>
+                    <h3 class="project-title">Anomaly Detection in Wireless Sensor Networks</h3>
+                    <p class="project-description">
+                        Machine Learning Detection and Prediction project for anomalies in Wireless Sensor Networks 
+                        using the WSN-DS Dataset.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Jupyter Notebook</span>
+                        <span class="tech-tag">Pandas</span>
+                        <span class="tech-tag">NumPy</span>
+                        <span class="tech-tag">Scikit-Learn</span>
+                        <span class="tech-tag">XGBoost</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="project-link">
+                            <i class="fab fa-github"></i>
+                            View Code
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-card" data-tilt>
+                    <div class="project-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3 class="project-title">Email Spam Classifier</h3>
+                    <p class="project-description">
+                        Email/SMS Spam detection machine learning models tested using various classifiers like 
+                        AdaBoost, Support Vector and Stacking classifier.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">NLTK</span>
+                        <span class="tech-tag">Scikit-Learn</span>
+                        <span class="tech-tag">XGBoost</span>
+                        <span class="tech-tag">Matplotlib</span>
+                        <span class="tech-tag">Seaborn</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="project-link">
+                            <i class="fab fa-github"></i>
+                            View Code
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-card" data-tilt>
+                    <div class="project-icon">
+                        <i class="fas fa-bitcoin"></i>
+                    </div>
+                    <h3 class="project-title">Real-Time Cryptocurrency Trend Analysis</h3>
+                    <p class="project-description">
+                        Real-Time trend analysis for Cryptocurrency coins using Big Data Technologies and Cloud Services.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">AWS S3</span>
+                        <span class="tech-tag">AWS EMR</span>
+                        <span class="tech-tag">Kafka</span>
+                        <span class="tech-tag">Flink</span>
+                        <span class="tech-tag">CoinGecko API</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="project-link">
+                            <i class="fab fa-github"></i>
+                            View Code
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Coming Soon Projects -->
+                <div class="project-card coming-soon" data-tilt>
+                    <div class="project-status">
+                        <i class="fas fa-clock"></i>
+                        <span>Coming Soon</span>
+                    </div>
+                    <div class="project-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3 class="project-title">AI-Powered Healthcare Analytics</h3>
+                    <p class="project-description">
+                        Developing a comprehensive healthcare analytics platform using deep learning to predict patient outcomes 
+                        and optimize treatment recommendations.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">TensorFlow</span>
+                        <span class="tech-tag">PyTorch</span>
+                        <span class="tech-tag">Docker</span>
+                        <span class="tech-tag">FastAPI</span>
+                        <span class="tech-tag">PostgreSQL</span>
+                    </div>
+                    <div class="project-progress">
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 65%"></div>
+                        </div>
+                        <span class="progress-text">65% Complete</span>
+                    </div>
+                </div>
+
+                <div class="project-card coming-soon" data-tilt>
+                    <div class="project-status">
+                        <i class="fas fa-clock"></i>
+                        <span>Coming Soon</span>
+                    </div>
+                    <div class="project-icon">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                    <h3 class="project-title">Financial Market Prediction System</h3>
+                    <p class="project-description">
+                        Building an advanced ML system for predicting stock market trends using sentiment analysis, 
+                        technical indicators, and real-time news data.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">LSTM Networks</span>
+                        <span class="tech-tag">Apache Spark</span>
+                        <span class="tech-tag">Redis</span>
+                        <span class="tech-tag">Plotly Dash</span>
+                        <span class="tech-tag">Alpha Vantage API</span>
+                    </div>
+                    <div class="project-progress">
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 40%"></div>
+                        </div>
+                        <span class="progress-text">40% Complete</span>
+                    </div>
+                </div>
+
+                <div class="project-card coming-soon" data-tilt>
+                    <div class="project-status">
+                        <i class="fas fa-clock"></i>
+                        <span>Coming Soon</span>
+                    </div>
+                    <div class="project-icon">
+                        <i class="fas fa-language"></i>
+                    </div>
+                    <h3 class="project-title">Multilingual NLP Translation Engine</h3>
+                    <p class="project-description">
+                        Creating a state-of-the-art translation system supporting 50+ languages with context-aware 
+                        translations and cultural adaptation features.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Transformers</span>
+                        <span class="tech-tag">BERT</span>
+                        <span class="tech-tag">Kubernetes</span>
+                        <span class="tech-tag">React</span>
+                        <span class="tech-tag">MongoDB</span>
+                    </div>
+                    <div class="project-progress">
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 25%"></div>
+                        </div>
+                        <span class="progress-text">25% Complete</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-number">05.</span>
+                Professional Experience
+            </h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-date">Sep 2022 - Oct 2023</div>
+                    <div class="timeline-content">
+                        <h3 class="timeline-title">Junior Data Analyst</h3>
+                        <h4 class="timeline-company">AMS Informatics - Chandigarh, India</h4>
+                        <ul class="timeline-description">
+                            <li>Increased customer website traffic by 30% by suggesting time slots to push 
+                                advertisement of customer websites based on existing data and traffic metrics.</li>
+                            <li>Streamlined existing databases enhancing ease of use and reducing error in 
+                                data querying by 15%.</li>
+                            <li>Collaborated with various internal teams to understand their needs and provide 
+                                data support to increase customer website traffic.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-number">06.</span>
+                Get In Touch
+            </h2>
+            <div class="contact-content">
+                <p class="contact-text">
+                    I'm always interested in hearing about new opportunities in data science, 
+                    machine learning, and analytics. Whether you have a question or just want to say hi, 
+                    feel free to reach out!
+                </p>
+                <div class="contact-info">
+                    <a href="mailto:manjot1191@gmail.com" class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        manjot1191@gmail.com
+                    </a>
+                    <a href="tel:+16693026269" class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        (669) 302-6269
+                    </a>
+                    <a href="#" class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        San Jose, CA
+                    </a>
+                </div>
+                <a href="mailto:manjot1191@gmail.com" class="btn btn-primary btn-lg">
+                    <span>Say Hello</span>
+                    <i class="fas fa-paper-plane"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Manjot Singh. Built with passion and code.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
