@@ -159,10 +159,6 @@ const counterObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting && !entry.target.classList.contains('counted')) {
             entry.target.classList.add('counted');
-            // Special handling for the GPA counter
-            if (entry.target.innerText === '9.55') {
-                entry.target.innerText = '0';
-            }
             countUp(entry.target);
         }
     });
