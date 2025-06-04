@@ -1025,6 +1025,13 @@ section {
     transform: translateY(-2px);
 }
 
+.contact-cta {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
 .btn-lg {
     padding: 1rem 2rem;
     font-size: 1.1rem;
