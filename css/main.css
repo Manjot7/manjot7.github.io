@@ -66,8 +66,15 @@
 
 .project-title {
     font-size: 1.3rem;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
     color: var(--text-primary);
+}
+
+.project-subtitle {
+    font-size: 1rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-weight: 400;
 }
 
 .project-description {
