@@ -3,36 +3,46 @@ function createParticles() {
     const particlesContainer = document.getElementById('particles');
     const particleCount = 50;
     
+    // Create keyframes for different particle movements
+    const style = document.createElement('style');
+    let keyframes = '';
+    
     for (let i = 0; i < particleCount; i++) {
         const particle = document.createElement('div');
         particle.className = 'particle';
+        const size = Math.random() * 3 + 1;
+        const startX = Math.random() * 100;
+        const duration = Math.random() * 10 + 10;
+        const xMovement = Math.random() * 200 - 100;
+        
         particle.style.cssText = `
             position: absolute;
-            width: ${Math.random() * 3 + 1}px;
-            height: ${Math.random() * 3 + 1}px;
+            width: ${size}px;
+            height: ${size}px;
             background: rgba(139, 92, 246, ${Math.random() * 0.5 + 0.5});
             border-radius: 50%;
-            left: ${Math.random() * 100}%;
+            left: ${startX}%;
             top: ${Math.random() * 100}%;
-            animation: particleFloat ${Math.random() * 10 + 10}s linear infinite;
+            animation: particleFloat${i} ${duration}s linear infinite;
         `;
+        
+        keyframes += `
+            @keyframes particleFloat${i} {
+                from {
+                    transform: translateY(0) translateX(0);
+                }
+                to {
+                    transform: translateY(-100vh) translateX(${xMovement}px);
+                }
+            }
+        `;
+        
         particlesContainer.appendChild(particle);
     }
+    
+    style.textContent = keyframes;
+    document.head.appendChild(style);
 }
-
-// Add particle float animation
-const style = document.createElement('style');
-style.textContent = `
-    @keyframes particleFloat {
-        from {
-            transform: translateY(0) translateX(0);
-        }
-        to {
-            transform: translateY(-100vh) translateX(${Math.random() * 200 - 100}px);
-        }
-    }
-`;
-document.head.appendChild(style);
 
 // Navigation
 const navbar = document.querySelector('.navbar');
@@ -137,7 +147,9 @@ const counters = document.querySelectorAll('.stat-number');
 const speed = 200;
 
 const countUp = (counter) => {
-    const target = +counter.getAttribute('data-target') || parseFloat(counter.innerText);
+    const target = counter.hasAttribute('data-target') 
+        ? +counter.getAttribute('data-target') 
+        : parseFloat(counter.innerText);
     const isDecimal = target % 1 !== 0;
     const count = +counter.innerText;
     const increment = target / speed;
@@ -231,8 +243,15 @@ tiltElements.forEach(el => {
 
 // Initialize
 document.addEventListener('DOMContentLoaded', () => {
-    createParticles();
-    setTimeout(typeWriter, 1000);
+    // Check if particles container exists before creating particles
+    if (document.getElementById('particles')) {
+        createParticles();
+    }
+    
+    // Check if typing text element exists before starting animation
+    if (document.querySelector('.typing-text')) {
+        setTimeout(typeWriter, 1000);
+    }
     
     // Add loading animation
     document.body.style.opacity = '0';
