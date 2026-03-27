@@ -1,544 +1,274 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Manjot Singh - Data Scientist Portfolio</title>
-    <link rel="stylesheet" href="./css/main.css">
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Manjot Singh // Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Share+Tech+Mono&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-    <!-- Animated Background -->
-    <div class="animated-bg">
-        <div class="gradient-bg"></div>
-        <div class="particles" id="particles"></div>
+
+  <canvas id="bg-canvas"></canvas>
+  <div id="scanlines"></div>
+
+  <div class="corner corner-tl"></div>
+  <div class="corner corner-tr"></div>
+  <div class="corner corner-bl"></div>
+  <div class="corner corner-br"></div>
+
+  <button id="nav-left" aria-label="Previous page">&#9664;</button>
+  <button id="nav-right" aria-label="Next page">&#9654;</button>
+  <div id="page-dots"></div>
+  <div id="page-label"></div>
+
+  <div id="pages-wrapper">
+
+    <!-- PAGE 0: SPLASH -->
+    <div class="page" id="splash">
+      <div class="splash-center">
+        <div class="splash-sub">// DATA SCIENTIST //</div>
+        <div class="splash-title">
+          <span id="typewriter"></span><span class="cursor-blink">_</span>
+        </div>
+        <button class="enter-btn" id="enter-btn">[ ENTER ]</button>
+      </div>
     </div>
 
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <span class="logo-text">MS</span>
-            </div>
-            <div class="nav-menu" id="navMenu">
-                <a href="#home" class="nav-link active">Home</a>
-                <a href="#about" class="nav-link">About</a>
-                <a href="#skills" class="nav-link">Skills</a>
-                <a href="#experience" class="nav-link">Experience</a>
-                <a href="#projects" class="nav-link">Projects</a>
-                <a href="#academics" class="nav-link">Education</a>
-                <a href="#contact" class="nav-link">Contact</a>
-            </div>
-            <div class="nav-toggle" id="navToggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
+    <!-- PAGE 1: ABOUT -->
+    <div class="page scrollable" id="page-about">
+      <div class="page-inner">
+        <div class="page-heading"><span class="page-num">01 //</span> ABOUT</div>
+        <div class="about-name">MANJOT SINGH</div>
+        <div class="about-role">DATA SCIENTIST &nbsp;&middot;&nbsp; MS APPLIED DATA SCIENCE &nbsp;&middot;&nbsp; GREEN CARD HOLDER</div>
+        <p class="about-body">
+          MS in Applied Data Science from San Jose State University. I build production ML systems —
+          real-time pipelines, ensemble models, deep learning architectures — and I care about the whole stack:
+          from feature engineering to Streamlit deployment. Previously at AMS Informatics where I turned
+          data into a 40% engagement lift and a 30% efficiency gain. Actively seeking Data Scientist and Data Analyst roles.
+        </p>
+        <div class="about-tags">
+          <span class="tag">Machine Learning</span>
+          <span class="tag">Deep Learning</span>
+          <span class="tag">NLP</span>
+          <span class="tag">Time Series</span>
+          <span class="tag">MLOps</span>
+          <span class="tag">Statistical Modeling</span>
+          <span class="tag">Ensemble Methods</span>
+          <span class="tag">Python</span>
+          <span class="tag">SQL</span>
         </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <div class="hero-text">
-                <div class="glitch" data-text="Hello, I'm">Hello, I'm</div>
-                <h1 class="hero-title">Manjot Singh</h1>
-                <div class="hero-subtitle">
-                    <span class="typing-text">Data Scientist</span>
-                    <span class="cursor">|</span>
-                </div>
-                <p class="hero-description">
-                    Data Scientist with expertise in Large Language Models, Deep Reinforcement Learning, and Real-Time Analytics. 
-                    Proven track record building production ML systems that increased customer traffic by 40% and improved operational efficiency by 30%.
-                </p>
-                <div class="hero-cta">
-                    <a href="#projects" class="btn btn-primary">
-                        <span>View Projects</span>
-                        <i class="fas fa-arrow-right"></i>
-                    </a>
-                    <a href="https://drive.google.com/file/d/1tw8tDF6BffGvPf3ecdO-uX5eQb2U_sfX/view?usp=sharing" class="btn btn-secondary" target="_blank">
-                        <span>View Resume</span>
-                        <i class="fas fa-eye"></i>
-                    </a>
-                </div>
-                <div class="social-links">
-                    <a href="https://github.com/Manjot7" target="_blank" class="social-link">
-                        <i class="fab fa-github"></i>
-                    </a>
-                    <a href="https://www.linkedin.com/in/manjot-singh-6b5110228" target="_blank" class="social-link">
-                        <i class="fab fa-linkedin"></i>
-                    </a>
-                    <a href="mailto:manjot1191@gmail.com" class="social-link">
-                        <i class="fas fa-envelope"></i>
-                    </a>
-                </div>
-            </div>
-            <div class="hero-visual">
-                <div class="floating-cards">
-                    <div class="card card-1">
-                        <i class="fas fa-brain"></i>
-                        <span>ML</span>
-                    </div>
-                    <div class="card card-2">
-                        <i class="fas fa-chart-line"></i>
-                        <span>Analytics</span>
-                    </div>
-                    <div class="card card-3">
-                        <i class="fas fa-database"></i>
-                        <span>Big Data</span>
-                    </div>
-                </div>
-            </div>
+        <div class="about-links">
+          <a class="icon-link" href="https://github.com/Manjot7" target="_blank">GITHUB</a>
+          <a class="icon-link" href="https://www.linkedin.com/in/manjot-singh-6b5110228" target="_blank">LINKEDIN</a>
+          <a class="icon-link" href="mailto:manjot1191@gmail.com">EMAIL</a>
+          <a class="icon-link" href="https://drive.google.com/file/d/1tw8tDF6BffGvPf3ecdO-uX5eQb2U_sfX/view?usp=sharing" target="_blank">RESUME</a>
         </div>
-    </section>
+      </div>
+    </div>
 
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <h2 class="section-title">
-                <span class="title-number">01.</span>
-                About Me
-            </h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <p>
-                        I'm a passionate Data Scientist with expertise in Large Language Models, Deep Reinforcement Learning, 
-                        and Real-Time Analytics. Currently pursuing my Master's in Applied Data Intelligence at 
-                        San Jose State University (GPA: 3.37/4.0), I bring a strong foundation from my Bachelor's degree 
-                        in Computer Science & Engineering with Data Science Specialization (CGPA: 9.55/10).
-                    </p>
-                    <p>
-                        My experience as a Junior Data Analyst at AMS Informatics allowed me to drive significant 
-                        business impact, including a 40% increase in customer website traffic through data-driven 
-                        content strategies and a 30% improvement in database query efficiency. I specialize in building 
-                        production ML systems and have developed interactive visualization dashboards that improved 
-                        client satisfaction scores by 25%.
-                    </p>
-                    <p>
-                        Authorized to work in the US (Green Card holder), I'm actively seeking roles as a Data Scientist, 
-                        ML Engineer, or AI Researcher. I'm proficient in multiple languages including English (Professional), 
-                        Hindi, Punjabi, and Japanese (JLPT N4).
-                    </p>
-                </div>
-                <div class="about-stats">
-                    <div class="stat-card">
-                        <div class="stat-icon"><i class="fas fa-chart-line"></i></div>
-                        <div class="stat-number" data-target="40">0</div>
-                        <div class="stat-label">% Traffic Increase</div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="stat-icon"><i class="fas fa-tachometer-alt"></i></div>
-                        <div class="stat-number" data-target="30">0</div>
-                        <div class="stat-label">% Efficiency Gain</div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="stat-icon"><i class="fas fa-smile"></i></div>
-                        <div class="stat-number" data-target="25">0</div>
-                        <div class="stat-label">% Client Satisfaction &uarr;</div>
-                    </div>
-                </div>
+    <!-- PAGE 2: SKILLS -->
+    <div class="page scrollable" id="page-skills">
+      <div class="page-inner">
+        <div class="page-heading"><span class="page-num">02 //</span> SKILLS</div>
+        <div class="skills-grid">
+          <div class="skill-block">
+            <div class="skill-block-title">LANGUAGES</div>
+            <ul class="skill-list"><li>Python</li><li>SQL</li></ul>
+          </div>
+          <div class="skill-block">
+            <div class="skill-block-title">ML / DL LIBS</div>
+            <ul class="skill-list">
+              <li>PyTorch</li><li>TensorFlow</li><li>Scikit-Learn</li>
+              <li>XGBoost</li><li>LightGBM</li><li>CatBoost</li>
+              <li>NumPy</li><li>Pandas</li>
+            </ul>
+          </div>
+          <div class="skill-block">
+            <div class="skill-block-title">CLOUD &amp; DATA</div>
+            <ul class="skill-list">
+              <li>AWS S3</li><li>SageMaker</li><li>GCP</li>
+              <li>Snowflake</li><li>BigQuery</li><li>PostgreSQL</li>
+              <li>MongoDB</li><li>Azure</li>
+            </ul>
+          </div>
+          <div class="skill-block">
+            <div class="skill-block-title">TOOLS &amp; MLOPS</div>
+            <ul class="skill-list">
+              <li>MLflow</li><li>Kafka</li><li>Docker</li>
+              <li>GitHub Actions</li><li>Streamlit</li>
+              <li>FastAPI</li><li>Git</li>
+            </ul>
+          </div>
+          <div class="skill-block">
+            <div class="skill-block-title">CORE SKILLS</div>
+            <ul class="skill-list">
+              <li>Feature Engineering</li><li>Experiment Design</li>
+              <li>Time Series</li><li>Ensemble Methods</li>
+              <li>SHAP / XAI</li><li>NLP</li><li>Computer Vision</li>
+            </ul>
+          </div>
+          <div class="skill-block">
+            <div class="skill-block-title">VISUALIZATION</div>
+            <ul class="skill-list">
+              <li>Matplotlib</li><li>Seaborn</li>
+              <li>Power BI</li><li>Gradio</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PAGE 3: EXPERIENCE -->
+    <div class="page scrollable" id="page-exp">
+      <div class="page-inner">
+        <div class="page-heading"><span class="page-num">03 //</span> EXPERIENCE</div>
+        <div class="exp-card">
+          <div class="exp-company">AMS INFORMATICS</div>
+          <div class="exp-role">// JUNIOR DATA ANALYST</div>
+          <div class="exp-date">Sep 2022 — Oct 2023 &nbsp;&middot;&nbsp; Chandigarh, India</div>
+          <ul class="exp-bullets">
+            <li>Analyzed performance data across 30+ client websites to identify bounce rate and page speed trends, delivering insights that reduced average bounce rate by 22%.</li>
+            <li>Cross-referenced traffic, uptime, and engagement data to flag underperforming pages — directly improving average client retention by 25%.</li>
+            <li>Built SQL reporting dashboards tracking KPIs across 30+ sites, cutting manual reporting time by 6 hours/week and enabling faster data-driven decisions.</li>
+            <li>Implemented targeted content strategies using web analytics, increasing customer traffic by 40% within 6 months.</li>
+            <li>Consolidated data sources, reducing query times by 30% and improving system efficiency.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- PAGE 4: PROJECTS -->
+    <div class="page scrollable" id="page-projects">
+      <div class="page-inner">
+        <div class="page-heading"><span class="page-num">04 //</span> PROJECTS</div>
+        <div class="projects-grid">
+          <div class="project-card">
+            <div class="project-name">CUSTOMER CHURN PREDICTION</div>
+            <div class="project-desc">Ensemble ML system with 15 algorithms, 85.9% accuracy. SMOTE-Tomek rebalancing on 10K records. Live Streamlit app with real-time predictions in &lt;200ms.</div>
+            <div class="project-stack">
+              <span>XGBoost</span><span>LightGBM</span><span>CatBoost</span><span>Streamlit</span><span>GridSearchCV</span>
             </div>
-        </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills" class="skills">
-        <div class="container">
-            <h2 class="section-title">
-                <span class="title-number">02.</span>
-                Technical Skills
-            </h2>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <h3 class="skill-title">
-                        <i class="fas fa-code"></i>
-                        Languages
-                    </h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Python</span>
-                        <span class="skill-tag">SQL</span>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3 class="skill-title">
-                        <i class="fas fa-tools"></i>
-                        Machine Learning
-                    </h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">PyTorch</span>
-                        <span class="skill-tag">TensorFlow</span>
-                        <span class="skill-tag">Scikit-Learn</span>
-                        <span class="skill-tag">XGBoost</span>
-                        <span class="skill-tag">Transformers</span>
-                        <span class="skill-tag">Hugging Face</span>
-                        <span class="skill-tag">NLTK</span>
-                        <span class="skill-tag">NumPy</span>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3 class="skill-title">
-                        <i class="fas fa-cloud"></i>
-                        Big Data & Cloud
-                    </h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">AWS (S3, EMR, EC2)</span>
-                        <span class="skill-tag">GCP</span>
-                        <span class="skill-tag">Apache Spark</span>
-                        <span class="skill-tag">Kafka</span>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3 class="skill-title">
-                        <i class="fas fa-chart-bar"></i>
-                        Data Visualization
-                    </h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Tableau</span>
-                        <span class="skill-tag">Power BI</span>
-                        <span class="skill-tag">Plotly</span>
-                        <span class="skill-tag">Matplotlib</span>
-                        <span class="skill-tag">Seaborn</span>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3 class="skill-title">
-                        <i class="fas fa-brain"></i>
-                        Specialized Skills
-                    </h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Large Language Models (LLMs)</span>
-                        <span class="skill-tag">RAG Systems</span>
-                        <span class="skill-tag">Deep Reinforcement Learning</span>
-                        <span class="skill-tag">Natural Language Processing</span>
-                        <span class="skill-tag">Computer Vision</span>
-                        <span class="skill-tag">Time Series Analysis</span>
-                        <span class="skill-tag">A/B Testing</span>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3 class="skill-title">
-                        <i class="fas fa-laptop-code"></i>
-                        Developer Tools
-                    </h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">GitHub</span>
-                        <span class="skill-tag">VS Code</span>
-                        <span class="skill-tag">Google Colab</span>
-                        <span class="skill-tag">Jupyter Notebooks</span>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3 class="skill-title">
-                        <i class="fas fa-language"></i>
-                        Languages
-                    </h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">English - Professional Proficiency</span>
-                        <span class="skill-tag">Hindi</span>
-                        <span class="skill-tag">Punjabi</span>
-                        <span class="skill-tag">Japanese - Basic Conversational Proficiency</span>
-                    </div>
-                </div>
+            <div class="project-link-row">
+              <a class="proj-link" href="https://manjot7-churn-predict.streamlit.app" target="_blank">LIVE DEMO</a>
+              <a class="proj-link" href="https://github.com/Manjot7" target="_blank">GITHUB</a>
             </div>
-        </div>
-    </section>
-
-    <!-- Experience Section -->
-    <section id="experience" class="experience">
-        <div class="container">
-            <h2 class="section-title">
-                <span class="title-number">03.</span>
-                Professional Experience
-            </h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-date">Sep 2022 - Oct 2023</div>
-                    <div class="timeline-content">
-                        <h3 class="timeline-title">Junior Data Analyst</h3>
-                        <h4 class="timeline-company">AMS Informatics - Chandigarh, India</h4>
-                        <ul class="timeline-description">
-                            <li>Analyzed website analytics data to identify user engagement patterns, implementing 
-                                targeted content strategies that increased customer traffic by 40% within 6 months</li>
-                            <li>Streamlined database operations by consolidating various data sources, reducing query 
-                                times by 30% and enhancing system efficiency for faster access to critical insights</li>
-                            <li>Developed interactive visualization dashboards showcasing performance metrics, enabling 
-                                data-driven decisions that improved client satisfaction scores by 25%</li>
-                        </ul>
-                    </div>
-                </div>
+          </div>
+          <div class="project-card">
+            <div class="project-name">MARKETPULSE — STOCK PIPELINE</div>
+            <div class="project-desc">Real-time pipeline ingesting 10 tickers every 5min via Kafka. FinBERT sentiment + GRU/LSTM hybrid. 2.04% MAPE on AAPL. 600+ MLflow runs, weekly retraining.</div>
+            <div class="project-stack">
+              <span>Kafka</span><span>FinBERT</span><span>LSTM</span><span>MLflow</span><span>FastAPI</span><span>Docker</span>
             </div>
-        </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="projects">
-        <div class="container">
-            <h2 class="section-title">
-                <span class="title-number">04.</span>
-                Featured Projects
-            </h2>
-            <div class="projects-grid">
-                <div class="project-card" data-tilt>
-                    <div class="project-icon">
-                        <i class="fas fa-comments"></i>
-                    </div>
-                    <h3 class="project-title">ConvoWeave-AI</h3>
-                    <h4 class="project-subtitle">Conversational AI System with Multi-Model Orchestration</h4>
-                    <p class="project-description">
-                        Achieved 89.3% test accuracy across 28 comprehensive tests, processing 768-dimensional embeddings 
-                        for sub-second semantic search while reducing memory footprint by 75% through model optimization.
-                    </p>
-                    <div class="project-tech">
-                        <span class="tech-tag">PyTorch</span>
-                        <span class="tech-tag">Transformers</span>
-                        <span class="tech-tag">Mistral-7B</span>
-                        <span class="tech-tag">RoBERTa</span>
-                        <span class="tech-tag">FAISS</span>
-                        <span class="tech-tag">ChromaDB</span>
-                        <span class="tech-tag">4-bit Quantization</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://github.com/Manjot7/ConvoWeave-AI" target="_blank" class="project-link">
-                            <i class="fab fa-github"></i>
-                            View Code
-                        </a>
-                    </div>
-                </div>
-
-                <div class="project-card" data-tilt>
-                    <div class="project-icon">
-                        <i class="fas fa-chess"></i>
-                    </div>
-                    <h3 class="project-title">FourKnights AI</h3>
-                    <h4 class="project-subtitle">Deep Reinforcement Learning Chess Engine with Style Transfer</h4>
-                    <p class="project-description">
-                        Trained 4 distinct AI personalities through 10,000+ self-play games, achieving 1500+ ELO ratings 
-                        with explainable AI visualizations for strategic move analysis.
-                    </p>
-                    <div class="project-tech">
-                        <span class="tech-tag">PyTorch</span>
-                        <span class="tech-tag">CNN-Transformer</span>
-                        <span class="tech-tag">Ray RLlib</span>
-                        <span class="tech-tag">Self-Play Training</span>
-                        <span class="tech-tag">Policy Gradients</span>
-                        <span class="tech-tag">Dueling Networks</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://github.com/Manjot7/FourKnightsAI" target="_blank" class="project-link">
-                            <i class="fab fa-github"></i>
-                            View Code
-                        </a>
-                    </div>
-                </div>
-
-                <div class="project-card" data-tilt>
-                    <div class="project-icon">
-                        <i class="fas fa-bitcoin"></i>
-                    </div>
-                    <h3 class="project-title">Real-Time Cryptocurrency Analytics Platform</h3>
-                    <h4 class="project-subtitle">Streaming Data Pipeline with ML-Powered Anomaly Detection</h4>
-                    <p class="project-description">
-                        Processed 1M+ transactions daily with 92% precision in anomaly detection, reducing similarity 
-                        search computation time by 85% across 100K+ cryptocurrencies.
-                    </p>
-                    <div class="project-tech">
-                        <span class="tech-tag">Apache Spark</span>
-                        <span class="tech-tag">Confluent Kafka</span>
-                        <span class="tech-tag">AWS EMR</span>
-                        <span class="tech-tag">Isolation Forest</span>
-                        <span class="tech-tag">LSTM</span>
-                        <span class="tech-tag">LSH Algorithm</span>
-                        <span class="tech-tag">SHAP</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://github.com/Manjot7/Crypto-trend-analysis" target="_blank" class="project-link">
-                            <i class="fab fa-github"></i>
-                            View Code
-                        </a>
-                    </div>
-                </div>
-
-                <div class="project-card" data-tilt>
-                    <div class="project-icon">
-                        <i class="fas fa-network-wired"></i>
-                    </div>
-                    <h3 class="project-title">Anomaly Detection in Wireless Sensor Networks</h3>
-                    <h4 class="project-subtitle">Machine Learning Detection and Prediction System</h4>
-                    <p class="project-description">
-                        Machine Learning Detection and Prediction project for anomalies in Wireless Sensor Networks 
-                        using the WSN-DS Dataset.
-                    </p>
-                    <div class="project-tech">
-                        <span class="tech-tag">Jupyter Notebook</span>
-                        <span class="tech-tag">Pandas</span>
-                        <span class="tech-tag">NumPy</span>
-                        <span class="tech-tag">Scikit-Learn</span>
-                        <span class="tech-tag">Matplotlib</span>
-                        <span class="tech-tag">Seaborn</span>
-                        <span class="tech-tag">XGBoost</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://github.com/Manjot7/Anomaly-detect-WSN" target="_blank" class="project-link">
-                            <i class="fab fa-github"></i>
-                            View Code
-                        </a>
-                    </div>
-                </div>
-
-                <div class="project-card" data-tilt>
-                    <div class="project-icon">
-                        <i class="fas fa-envelope"></i>
-                    </div>
-                    <h3 class="project-title">Email Spam Classifier</h3>
-                    <h4 class="project-subtitle">Multi-Model Spam Detection System</h4>
-                    <p class="project-description">
-                        Email/SMS Spam detection machine learning models tested using various classifiers like 
-                        AdaBoost, Support Vector and Stacking classifier.
-                    </p>
-                    <div class="project-tech">
-                        <span class="tech-tag">NLTK</span>
-                        <span class="tech-tag">Scikit-Learn</span>
-                        <span class="tech-tag">XGBoost</span>
-                        <span class="tech-tag">Matplotlib</span>
-                        <span class="tech-tag">Seaborn</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://github.com/Manjot7/Email-Spam-Classifier" target="_blank" class="project-link">
-                            <i class="fab fa-github"></i>
-                            View Code
-                        </a>
-                    </div>
-                </div>
+            <div class="project-link-row">
+              <a class="proj-link" href="https://huggingface.co/spaces/Manjot7/marketpulse-dashboard" target="_blank">LIVE DEMO</a>
             </div>
-        </div>
-    </section>
-
-    <!-- Academics Section -->
-    <section id="academics" class="academics">
-        <div class="container">
-            <h2 class="section-title">
-                <span class="title-number">05.</span>
-                Education
-            </h2>
-            <div class="academics-timeline">
-                <div class="academic-card" data-aos="fade-up">
-                    <div class="academic-icon">
-                        <i class="fas fa-university"></i>
-                    </div>
-                    <div class="academic-content">
-                        <h3 class="academic-degree">Master of Science in Applied Data Intelligence</h3>
-                        <h4 class="academic-institution">San Jose State University</h4>
-                        <div class="academic-details">
-                            <span class="academic-date"><i class="fas fa-calendar"></i> Jan 2024 - Dec 2025</span>
-                            <span class="academic-location"><i class="fas fa-map-marker-alt"></i> San Jose, CA, USA</span>
-                        </div>
-                        <div class="academic-grade">
-                            <span class="grade-label">GPA:</span>
-                            <span class="grade-value">3.37/4.0</span>
-                        </div>
-                        <div class="academic-courses">
-                            <h5>Key Coursework:</h5>
-                            <div class="course-tags">
-                                <span class="course-tag">Deep Learning</span>
-                                <span class="course-tag">Machine Learning</span>
-                                <span class="course-tag">Big Data</span>
-                                <span class="course-tag">Generative Models</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="academic-card" data-aos="fade-up">
-                    <div class="academic-icon">
-                        <i class="fas fa-graduation-cap"></i>
-                    </div>
-                    <div class="academic-content">
-                        <h3 class="academic-degree">Bachelor of Engineering in Computer Science & Engineering</h3>
-                        <h4 class="academic-institution">Chitkara University</h4>
-                        <div class="academic-details">
-                            <span class="academic-date"><i class="fas fa-calendar"></i> Aug 2019 - Jun 2023</span>
-                            <span class="academic-location"><i class="fas fa-map-marker-alt"></i> Rajpura, India</span>
-                        </div>
-                        <div class="academic-grade">
-                            <span class="grade-label">CGPA:</span>
-                            <span class="grade-value">9.55/10.0</span>
-                        </div>
-                        <div class="academic-courses">
-                            <h5>Specialization:</h5>
-                            <div class="course-tags">
-                                <span class="course-tag">Data Science Specialization</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="academic-card" data-aos="fade-up">
-                    <div class="academic-icon">
-                        <i class="fas fa-school"></i>
-                    </div>
-                    <div class="academic-content">
-                        <h3 class="academic-degree">Grade XII, High School</h3>
-                        <h4 class="academic-institution">High School</h4>
-                        <div class="academic-details">
-                            <span class="academic-date"><i class="fas fa-calendar"></i> 2019</span>
-                            <span class="academic-location"><i class="fas fa-map-marker-alt"></i> Chandigarh, India</span>
-                        </div>
-                    </div>
-                </div>
+          </div>
+          <div class="project-card">
+            <div class="project-name">CONVOWEAVE-AI</div>
+            <div class="project-desc">Conversational AI using Mistral-7B + RoBERTa with RAG architecture. 89.3% test accuracy. 4-bit quantization cutting memory 75% with no accuracy drop.</div>
+            <div class="project-stack">
+              <span>Mistral-7B</span><span>FAISS</span><span>ChromaDB</span><span>PyTorch</span><span>RAG</span>
             </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2 class="section-title">
-                <span class="title-number">06.</span>
-                Get In Touch
-            </h2>
-            <div class="contact-content">
-                <p class="contact-text">
-                    I'm always interested in hearing about new opportunities in data science, 
-                    machine learning, and analytics. Whether you have a question or just want to say hi, 
-                    feel free to reach out!
-                </p>
-                <div class="contact-info">
-                    <a href="mailto:manjot1191@gmail.com" class="contact-item">
-                        <i class="fas fa-envelope"></i>
-                        manjot1191@gmail.com
-                    </a>
-                    <a href="tel:+16693026269" class="contact-item">
-                        <i class="fas fa-phone"></i>
-                        669-302-6269
-                    </a>
-                    <a href="#" class="contact-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        San Jose, California
-                    </a>
-                </div>
-                <div class="contact-cta">
-                    <a href="mailto:manjot1191@gmail.com" class="btn btn-primary btn-lg">
-                        <span>Say Hello</span>
-                        <i class="fas fa-paper-plane"></i>
-                    </a>
-                    <a href="https://drive.google.com/file/d/1tw8tDF6BffGvPf3ecdO-uX5eQb2U_sfX/view?usp=sharing" class="btn btn-secondary btn-lg" target="_blank">
-                        <span>View Resume</span>
-                        <i class="fas fa-eye"></i>
-                    </a>
-                </div>
+            <div class="project-link-row">
+              <a class="proj-link" href="https://github.com/Manjot7" target="_blank">GITHUB</a>
             </div>
+          </div>
+          <div class="project-card">
+            <div class="project-name">DAT.AI — MIXTURE OF EXPERTS</div>
+            <div class="project-desc">MoE system on GCP with specialized fine-tuned models for theory, code, and math. Improved math accuracy from 20% to 50% on the MATH benchmark.</div>
+            <div class="project-stack">
+              <span>GCP</span><span>HuggingFace</span><span>Fine-Tuning</span><span>ZeroGPU</span>
+            </div>
+            <div class="project-link-row">
+              <a class="proj-link" href="https://github.com/Manjot7" target="_blank">GITHUB</a>
+            </div>
+          </div>
+          <div class="project-card">
+            <div class="project-name">ANOMALY DETECTION — WSN</div>
+            <div class="project-desc">Anomaly detection across distributed wireless sensor node data. Statistical + ML hybrid approach for identifying network failures in real time.</div>
+            <div class="project-stack">
+              <span>Python</span><span>Scikit-Learn</span><span>Statistical Modeling</span>
+            </div>
+            <div class="project-link-row">
+              <a class="proj-link" href="https://github.com/Manjot7/Anomaly-detect-WSN" target="_blank">GITHUB</a>
+            </div>
+          </div>
+          <div class="project-card">
+            <div class="project-name">EMAIL SPAM CLASSIFIER</div>
+            <div class="project-desc">Multi-model spam detection comparing AdaBoost, SVM, and Stacking Classifier. NLTK preprocessing pipeline with visual performance comparison.</div>
+            <div class="project-stack">
+              <span>NLTK</span><span>XGBoost</span><span>Scikit-Learn</span><span>Seaborn</span>
+            </div>
+            <div class="project-link-row">
+              <a class="proj-link" href="https://github.com/Manjot7/Email-Spam-Classifier" target="_blank">GITHUB</a>
+            </div>
+          </div>
         </div>
-    </section>
+      </div>
+    </div>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2024 Manjot Singh. Built with passion and code.</p>
+    <!-- PAGE 5: EDUCATION -->
+    <div class="page scrollable" id="page-edu">
+      <div class="page-inner">
+        <div class="page-heading"><span class="page-num">05 //</span> EDUCATION</div>
+        <div class="edu-list">
+          <div class="edu-card">
+            <div class="edu-year">2024 — 2025</div>
+            <div class="edu-details">
+              <div class="edu-degree">MASTER OF SCIENCE<br>APPLIED DATA SCIENCE</div>
+              <div class="edu-school">San Jose State University &nbsp;&middot;&nbsp; San Jose, CA</div>
+              <div class="edu-gpa">GPA: 3.37 / 4.0</div>
+            </div>
+          </div>
+          <div class="edu-card">
+            <div class="edu-year">2019 — 2023</div>
+            <div class="edu-details">
+              <div class="edu-degree">BACHELOR OF ENGINEERING<br>COMPUTER SCIENCE &amp; ENGINEERING</div>
+              <div class="edu-school">Chitkara University &nbsp;&middot;&nbsp; Chandigarh, India</div>
+              <div class="edu-gpa">CGPA: 9.55 / 10.0</div>
+            </div>
+          </div>
         </div>
-    </footer>
+      </div>
+    </div>
 
-    <script src="./js/main.js"></script>
+    <!-- PAGE 6: CONTACT -->
+    <div class="page" id="page-contact">
+      <div class="page-inner">
+        <div class="page-heading"><span class="page-num">06 //</span> CONTACT</div>
+        <div class="contact-tagline">LET'S BUILD<br>SOMETHING.</div>
+        <div class="contact-sub">
+          Open to Data Scientist and Data Analyst roles. No sponsorship needed — Green Card holder based in Fremont, CA.
+        </div>
+        <div class="contact-rows">
+          <div class="contact-row">
+            <span class="contact-label">EMAIL</span>
+            <a class="contact-value" href="mailto:manjot1191@gmail.com">manjot1191@gmail.com</a>
+          </div>
+          <div class="contact-row">
+            <span class="contact-label">PHONE</span>
+            <a class="contact-value" href="tel:+16693026269">669-302-6269</a>
+          </div>
+          <div class="contact-row">
+            <span class="contact-label">LINKEDIN</span>
+            <a class="contact-value" href="https://www.linkedin.com/in/manjot-singh-6b5110228" target="_blank">manjot-singh-6b5110228</a>
+          </div>
+          <div class="contact-row">
+            <span class="contact-label">GITHUB</span>
+            <a class="contact-value" href="https://github.com/Manjot7" target="_blank">github.com/Manjot7</a>
+          </div>
+          <div class="contact-row">
+            <span class="contact-label">LOCATION</span>
+            <span class="contact-value no-hover">Fremont, California</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /pages-wrapper -->
+
+  <script src="js/main.js"></script>
 </body>
-
 </html>
